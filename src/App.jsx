@@ -1,4 +1,6 @@
+import React from "react";
 import Nav from "./components/Nav/Nav";
+import ProductDisplay from "./components/ProductDisplay";
 
 import "./App.css";
 
@@ -10,7 +12,7 @@ function App() {
       </header>
       <main>
         <div className={`productInfoWrapper`}>
-          <div className="productDisplay"></div>
+          <ProductDisplay />
           <div className="productInfo"></div>
         </div>
       </main>
