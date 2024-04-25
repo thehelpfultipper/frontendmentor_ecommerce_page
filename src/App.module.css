@@ -3,3 +3,8 @@
     flex-direction: column;
     border-bottom: 1px solid var(--gray-blue);
 }
+
+.productInfoWrapper {
+    margin: 150px 80px;
+    display: flex;
+}

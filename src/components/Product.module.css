@@ -1,0 +1,24 @@
+.productMain {
+    width: calc(150px *4 + 160px);
+    height: calc(150px *4 + 160px);
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+
+.productThumbnail {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.productMain,
+.productThumbnail {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.thumbnailWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}

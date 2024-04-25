@@ -11,7 +11,7 @@ function App() {
         <Nav />
       </header>
       <main className={`container`}>
-        <div className={`productInfoWrapper`}>
+        <div className={`${s.productInfoWrapper}`}>
           <ProductDisplay />
           <div className="productInfo"></div>
         </div>
