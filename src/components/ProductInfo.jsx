@@ -10,7 +10,7 @@ export default function ProductInfo() {
     const { ...item } = displayProduct;
 
   return (
-    <div className={s.productInfoWrapper}>
+    <div className={s.productInfo}>
       <span className={s.company}>{item.brand}</span>
       <hgroup className={s.product}>
         <h2>{item.name}</h2>

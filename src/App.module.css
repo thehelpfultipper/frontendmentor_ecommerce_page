@@ -7,4 +7,5 @@
 .productInfoWrapper {
     margin: 150px 80px;
     display: flex;
+    gap: 120px;
 }

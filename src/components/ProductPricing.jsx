@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+import { getPrice } from "../helpers/utils";
+
 import s from "./Product.module.css";
 
 
 export default function ProductPricing({item}) {
   const [isSale, setIsSale] = useState(false);
+
+  const salePercent = `${Math.floor(item.sale * 100)}%`;
 
   useEffect(() => {
     // False check on product pricing to determine sale
@@ -14,11 +18,11 @@ export default function ProductPricing({item}) {
 
   return (
     <div className={s.priceWrapper}>
-      <span className={s.price}>{item.currentPrice}</span>
+      <span className={s.price}>{getPrice(item.currentPrice)}</span>
       {isSale && (
         <>
-          <span className={s.discount}>{item.sale}</span>
-          <span className={s.fullPrice}>{item.fullPrice}</span>
+          <span className={s.discount}>{salePercent}</span>
+          <span className={s.fullPrice}>{getPrice(item.fullPrice)}</span>
         </>
       )}
     </div>
