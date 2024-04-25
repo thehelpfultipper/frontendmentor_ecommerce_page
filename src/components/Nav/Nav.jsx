@@ -3,18 +3,20 @@ import React from "react";
 import * as assets from "../../assets/index.js";
 import { MENU } from "../../helpers/data.js";
 
+import s from './Nav.module.css';
+
 export default function Nav() {
   return (
-    <nav className="navWrapper">
-      <div className="navLft">
-        <div className="logo">
+    <nav className={`${s.navWrapper}`}>
+      <div className={s.navLft}>
+        <div className={s.logo}>
           <img
             src={assets.logo}
             alt="Company logo."
           />
         </div>
-        <div className="menu">
-          <ul>
+        <div className={s.menu}>
+          <ul className={`noList`}>
             {MENU.map((item, i) => {
               return (
                 <li key={i}>
@@ -25,8 +27,8 @@ export default function Nav() {
           </ul>
         </div>
       </div>
-      <div className="navRht">
-        <div className="cart">
+      <div className={s.navRht}>
+        <div className={s.cart}>
           <img
             src="/icon-cart.svg"
             alt="Shopping cart icon."

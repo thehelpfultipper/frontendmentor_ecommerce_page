@@ -1,0 +1,52 @@
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.navWrapper > * {
+    display: flex;
+}
+
+.navLft {
+    gap: 50px;
+    flex: 2;
+}
+
+.logo {
+    max-width: 250px;
+    width: 100%;
+}
+
+.menu {
+    align-self: center;
+}
+
+.menu>ul {
+    display: flex;
+    gap: 30px;
+}
+
+.menu>ul>li>a {
+    font-size: 1.5rem;
+    letter-spacing: .02rem;
+}
+
+.navRht {
+    justify-content: flex-end;
+    gap: 60px;
+    flex: 1;
+}
+
+.cart {
+    max-width: 40px;
+    width: 100%;
+    align-self: center;
+}
+
+
+.logo img, 
+.cart img {
+    width: 100%;
+}

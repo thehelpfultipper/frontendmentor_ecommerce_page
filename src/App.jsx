@@ -2,15 +2,15 @@ import React from "react";
 import Nav from "./components/Nav/Nav";
 import ProductDisplay from "./components/ProductDisplay";
 
-import "./App.css";
+import s from "./App.module.css";
 
 function App() {
   return (
     <>
-      <header>
+      <header className={`container ${s.header}`}>
         <Nav />
       </header>
-      <main>
+      <main className={`container`}>
         <div className={`productInfoWrapper`}>
           <ProductDisplay />
           <div className="productInfo"></div>
