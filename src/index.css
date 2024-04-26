@@ -55,3 +55,9 @@ body a {
   padding: 0;
   margin: 0;
 }
+
+.noBtn {
+  border: none;
+  background: inherit;
+  margin: 0;
+}
