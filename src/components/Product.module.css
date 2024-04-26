@@ -38,7 +38,7 @@
 }
 
 .product h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-top: 20px;
     color: var(--black);
 }
@@ -73,4 +73,9 @@
 
 .fullPrice {
     display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--gray-blue);
+    text-decoration: line-through;
+    margin-top: 10px;
 }
