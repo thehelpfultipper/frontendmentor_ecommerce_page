@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as assets from "../../assets/index.js";
+import CartIcon from "../../icons/CartIcon.jsx";
 import { MENU } from "../../helpers/data.js";
 
 import s from './Nav.module.css';
@@ -29,10 +30,7 @@ export default function Nav() {
       </div>
       <div className={s.navRht}>
         <div className={s.cart}>
-          <img
-            src="/icon-cart.svg"
-            alt="Shopping cart icon."
-          />
+          <CartIcon />
         </div>
         <div className="profile">
           <img
