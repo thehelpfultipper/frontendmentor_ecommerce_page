@@ -5,10 +5,10 @@ import ProductDisplay from './ProductDisplay';
 
 import s from './LightBox.module.css';
 
-export default function LightBox() {
+export default function LightBox({open, item}) {
   return (
     <Modal>
-        <ProductDisplay />
+        <ProductDisplay item={item} open={open} />
     </Modal>
   )
 }

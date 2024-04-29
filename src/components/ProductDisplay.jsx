@@ -2,19 +2,23 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import ProductThumbnail from "./ProductThumbnail";
 import LightBox from "./LightBox";
+import useModal from "../hooks/useModal";
 import * as assets from "../assets/index";
 
 import s from "./Product.module.css";
 
-export default function ProductDisplay() {
-  const [selectedItem, setSelectedItem] = useState(1);
+export default function ProductDisplay(props) {
+  const [selectedItem, setSelectedItem] = useState(props?.item || 1);
+  const { isOpen, openModal } = useModal();
 
-  const lightboxHandler = (e) => {
-    console.log('show lightbox')
+  const lightboxHandler = () => {
+    if(props?.open) return;
+    openModal();
   };
 
   return (
     <>
+      {isOpen ? <LightBox open={isOpen} item={selectedItem} /> : null}
       <div className={`productDisplayWrapper`}>
         <div
           className={`${s.productMain}`}
