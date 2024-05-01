@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 
 const LightboxContext = React.createContext({
-  selected: Number,
   isLbShowing: Boolean,
   onChange: (item) => { }
 });

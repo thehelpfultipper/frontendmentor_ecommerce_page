@@ -1,25 +1,26 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import ProductThumbnail from "./ProductThumbnail";
-import LightBox from "./LightBox";
-import useModal from "../hooks/useModal";
 import * as assets from "../assets/index";
+import useModal from "../hooks/useModal";
+import useMyContext from "../hooks/useMyContext";
+import LightboxContext from "../context/lightbox-context";
 
 import s from "./Product.module.css";
 
-export default function ProductDisplay(props) {
-  const [selectedItem, setSelectedItem] = useState(props?.item || 1);
-  const { isOpen, openModal } = useModal();
+export default function ProductDisplay() {
+  const [selectedItem, setSelectedItem] = useState(1);
+  const {isOpen, openModal} = useModal();
+  const {isLbShowing, onChange} = useMyContext(LightboxContext);
 
   const lightboxHandler = () => {
-    if(props?.open) return;
     openModal();
+    if(isLbShowing) return; // prevent click on lightbox product
+    onChange(true);
   };
 
   return (
-    <>
-      {isOpen ? <LightBox open={isOpen} item={selectedItem} /> : null}
-      <div className={`productDisplayWrapper`}>
+    <div className={`productDisplayWrapper`}>
         <div
           className={`${s.productMain}`}
           style={{ backgroundImage: `url(${assets["prod_" + selectedItem]})` }}
@@ -40,6 +41,10 @@ export default function ProductDisplay(props) {
           })}
         </div>
       </div>
-    </>
   );
+}
+
+ProductDisplay.defaultProps = {
+  item: 1,
+  isLtbx: false
 }
