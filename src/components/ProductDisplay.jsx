@@ -7,7 +7,7 @@ import LightboxContext from "../context/lightbox-context";
 
 import s from "./Product.module.css";
 
-export default function ProductDisplay() {
+export default function ProductDisplay(props) {
   const [selectedItem, setSelectedItem] = useState(1);
   const {isLbShowing, onChange} = useMyContext(LightboxContext);
 
@@ -17,7 +17,7 @@ export default function ProductDisplay() {
   };
 
   return (
-    <div className={`productDisplayWrapper`}>
+    <div className={`${s.productDisplayWrapper} ${props?.lb && s.lbx}`}>
         <div
           className={`${s.productMain}`}
           style={{ backgroundImage: `url(${assets["prod_" + selectedItem]})` }}
@@ -42,6 +42,5 @@ export default function ProductDisplay() {
 }
 
 ProductDisplay.defaultProps = {
-  item: 1,
-  isLtbx: false
+  lb: false
 }

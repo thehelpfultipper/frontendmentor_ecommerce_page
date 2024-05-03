@@ -10,7 +10,7 @@ import s from "./LightBox.module.css";
 export default function LightBox() {
   return (
     <Modal>
-      <ProductDisplay />
+      <ProductDisplay lb='true' />
       <span className={`${s.previous} ${s.lbNav}`}>
         <PreviousIcon />
       </span>

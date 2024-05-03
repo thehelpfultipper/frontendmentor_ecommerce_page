@@ -1,5 +1,5 @@
 .overlay {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     background: var(--black);
@@ -9,9 +9,9 @@
 }
 
 .overlayContent {
-    position: absolute;
+    position: fixed;
     left: 50%;
-    max-width: 640px;
+    max-width: 700px;
     width: 100%;
     top: 50%;
     transform: translate(-50%, -50%);

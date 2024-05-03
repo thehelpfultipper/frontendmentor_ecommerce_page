@@ -41,6 +41,21 @@
     opacity: 80%;
 }
 
+.productDisplayWrapper.lbx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productDisplayWrapper.lbx .productMain{
+    width: 700px;
+    height: 700px;
+}
+
+.productDisplayWrapper.lbx .thumbnailWrapper{
+    width: 600px;
+}
+
 /* Product Details */
 .productInfo{
     align-self: center;

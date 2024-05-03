@@ -40,7 +40,7 @@ function OverlayContent({children}) {
                     className={s.dismiss}
                     onClick={dismissModalHandler}
                     typeof={`button`}
-                ><CloseIcon /></span>
+                ><CloseIcon fill={`#fff`} /></span>
                 {children}
             </div>
         </>
