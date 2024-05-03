@@ -1,13 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 import CloseIcon from '../../icons/CloseIcon';
-import useModal from '../../hooks/useModal';
 import useMyContext from '../../hooks/useMyContext';
 import LightboxContext from '../../context/lightbox-context';
-
-// import PreviousIcon from '../../icons/PreviousIcon';
-// import NextIcon from '../../icons/NextIcon';
 
 import s from './Modal.module.css';
 
@@ -16,13 +12,25 @@ function Overlay() {
 }
 
 function OverlayContent({children}) {
-    const {closeModal} = useModal();
-    const {onChange} = useMyContext(LightboxContext);
+    const {isLbShowing,onChange} = useMyContext(LightboxContext);
 
     const dismissModalHandler = () => {
-        closeModal();
         onChange(false);
     }
+
+    useEffect( ()=>{
+        function handleScroll() {
+            if (isLbShowing) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        handleScroll();
+
+        return () => document.body.style.overflow = 'auto';
+    }, [isLbShowing]);
     
     return (
         <>
@@ -33,8 +41,6 @@ function OverlayContent({children}) {
                     onClick={dismissModalHandler}
                     typeof={`button`}
                 ><CloseIcon /></span>
-                {/* <span className={s.previous}><PreviousIcon /></span>
-                <span className={s.next}><NextIcon /></span> */}
                 {children}
             </div>
         </>

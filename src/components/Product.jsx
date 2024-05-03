@@ -3,7 +3,6 @@ import React from "react";
 import ProductDisplay from "./ProductDisplay";
 import ProductInfo from "./ProductInfo";
 import LightBox from "./LightBox";
-import useModal from "../hooks/useModal";
 import useMyContext from "../hooks/useMyContext";
 import LightboxContext from "../context/lightbox-context";
 

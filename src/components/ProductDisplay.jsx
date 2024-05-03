@@ -1,8 +1,7 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 import ProductThumbnail from "./ProductThumbnail";
 import * as assets from "../assets/index";
-import useModal from "../hooks/useModal";
 import useMyContext from "../hooks/useMyContext";
 import LightboxContext from "../context/lightbox-context";
 
@@ -10,11 +9,9 @@ import s from "./Product.module.css";
 
 export default function ProductDisplay() {
   const [selectedItem, setSelectedItem] = useState(1);
-  const {isOpen, openModal} = useModal();
   const {isLbShowing, onChange} = useMyContext(LightboxContext);
 
   const lightboxHandler = () => {
-    openModal();
     if(isLbShowing) return; // prevent click on lightbox product
     onChange(true);
   };

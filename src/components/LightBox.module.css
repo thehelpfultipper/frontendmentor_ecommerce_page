@@ -1,0 +1,14 @@
+.lbNav {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    background: white;
+}
+
+.previous {
+    left: 5%;
+}
+
+.next {
+    right: 5%;
+}
