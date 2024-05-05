@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 
 import Modal from "./UI/Modal";
 import ProductDisplay from "./ProductDisplay";
-import NextIcon from "../icons/NextIcon";
-import PreviousIcon from "../icons/PreviousIcon";
 import useMyContext from "../hooks/useMyContext";
 import LightboxContext from "../context/lightbox-context";
+import ArrowNav from "./UI/ArrowNav";
 
 import s from "./LightBox.module.css";
 
@@ -33,12 +32,7 @@ export default function LightBox() {
   return (
     <Modal onDismiss={dismissModalHandler}>
       <ProductDisplay lb='true' />
-      <span className={`${s.previous} ${s.lbNav}`}>
-        <PreviousIcon />
-      </span>
-      <span className={`${s.next} ${s.lbNav}`}>
-        <NextIcon />
-      </span>
+      {/* <ArrowNav cs={s.lbNav} /> */}
     </Modal>
   );
 }
