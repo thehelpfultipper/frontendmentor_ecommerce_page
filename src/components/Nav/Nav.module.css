@@ -1,52 +1,103 @@
 .navWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 35px;
 }
 
 .navWrapper > * {
-    display: flex;
+  display: flex;
 }
 
 .navLft {
-    gap: 50px;
-    flex: 2;
+  gap: 50px;
+  flex: 2;
 }
 
 .logo {
-    max-width: 250px;
-    width: 100%;
+  max-width: 250px;
+  width: 100%;
 }
 
+/* Full nav menu */
 .menu {
-    align-self: center;
+  align-self: center;
 }
 
-.menu>ul {
-    display: flex;
-    gap: 30px;
+.menu > ul {
+  display: flex;
+  gap: 30px;
 }
 
-.menu>ul>li>a {
-    font-size: 1.5rem;
-    letter-spacing: .02rem;
+.menu > ul > li > a {
+  font-size: 1.5rem;
+  letter-spacing: 0.02rem;
+}
+
+/* Mobile nav menu */
+.mobMenu {
+  display: none;
 }
 
 .navRht {
-    justify-content: flex-end;
-    gap: 60px;
-    flex: 1;
+  justify-content: flex-end;
+  gap: 60px;
+  flex: 1;
 }
 
 .cart {
-    max-width: 40px;
-    width: 100%;
-    align-self: center;
+  max-width: 40px;
+  width: 100%;
+  align-self: center;
 }
 
-
-.logo img, 
+.logo img,
 .cart img {
-    width: 100%;
+  width: 100%;
+}
+
+.profile {
+  max-width: 60px;
+  width: 100%;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1064px) {
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .mobMenu {
+    display: flex;
+    width: 28px;
+    align-items: center;
+  }
+
+  .navLft {
+    gap: 40px;
+  }
+
+  .cart {
+    max-width: 35px;
+  }
+
+  .menuPanel {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--black);
+  }
+
+  .menuPanel .mob {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 }

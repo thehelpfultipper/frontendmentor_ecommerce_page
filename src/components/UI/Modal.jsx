@@ -1,52 +1,44 @@
-import React, { useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import React from "react";
+import { createPortal } from "react-dom";
 
-import CloseIcon from '../../icons/CloseIcon';
-import useMyContext from '../../hooks/useMyContext';
-import LightboxContext from '../../context/lightbox-context';
+import CloseIcon from "../../icons/CloseIcon";
 
-import s from './Modal.module.css';
+import s from "./Modal.module.css";
 
 function Overlay() {
-    return <div className={s.overlay}></div>
+  return <div className={`${s.overlay}`}></div>;
 }
 
-function OverlayContent({children}) {
-    const {isLbShowing,onChange} = useMyContext(LightboxContext);
-
-    const dismissModalHandler = () => {
-        onChange(false);
-    }
-
-    useEffect( ()=>{
-        function handleScroll() {
-            if (isLbShowing) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        handleScroll();
-
-        return () => document.body.style.overflow = 'auto';
-    }, [isLbShowing]);
-    
-    return (
-        <>
-            <Overlay />
-            <div className={`${s.overlayContent}`}>
-                <span 
-                    className={s.dismiss}
-                    onClick={dismissModalHandler}
-                    typeof={`button`}
-                ><CloseIcon fill={`#fff`} /></span>
-                {children}
-            </div>
-        </>
-    )
+function OverlayContent({ children, mob, onDismiss }) {
+  return (
+    <>
+      <Overlay />
+      <div className={`${s.overlayContent} ${mob ? s.mob : ""}`}>
+        <span
+          className={s.dismiss}
+          onClick={onDismiss}
+          typeof={`button`}
+        >
+          <CloseIcon fill={mob ? `rgb(104, 112, 125)` : `#fff`} />
+        </span>
+        {children}
+      </div>
+    </>
+  );
 }
 
-export default function Modal({children}) {
-  return createPortal(<OverlayContent>{children}</OverlayContent>, document.querySelector('#overlay'));
+export default function Modal({ children, isMob, onDismiss }) {
+  return createPortal(
+    <OverlayContent
+      mob={isMob}
+      onDismiss={onDismiss}
+    >
+      {children}
+    </OverlayContent>,
+    document.querySelector("#overlay")
+  );
+}
+
+Modal.defaultProps = {
+  isMob: false
 }

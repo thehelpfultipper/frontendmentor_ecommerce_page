@@ -1,11 +1,17 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid var(--gray-blue);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--gray-blue);
 }
 
 .productInfoWrapper {
-    margin: 150px 80px;
-    display: flex;
-    gap: 120px;
+  margin: 150px 80px;
+  display: flex;
+  gap: 120px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    border-bottom: none;
+  }
 }
