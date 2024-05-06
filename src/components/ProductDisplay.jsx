@@ -21,9 +21,11 @@ export default function ProductDisplay(props) {
     <div className={`${s.productDisplayWrapper} ${props?.lb && s.lbx}`}>
       <div
         className={`${s.productMain}`}
-        style={{ backgroundImage: `url(${assets["prod_" + selectedItem]})` }}
+        // style={{ backgroundImage: `url(${assets["prod_" + selectedItem]})` }}
         onClick={lightboxHandler}
-      ></div>
+      >
+        <img src={assets["prod_" + selectedItem]} alt={`Product ${selectedItem}`} />
+      </div>
       <ArrowNav
         cs={s.productMobArrowNav}
         currentIndex={selectedItem}

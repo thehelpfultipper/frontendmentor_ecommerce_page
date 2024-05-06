@@ -1,144 +1,151 @@
 /* Product Display */
 .productMain {
-    width: calc(120px* 4 + 160px);
-    height: calc(120px* 4 + 160px);
-    border-radius: 30px;
-    margin-bottom: 50px;
+  display: flex;
+  max-width: calc(120px * 4 + 160px);
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.productMain img {
+  width: 100%;
+  height: 100%;
 }
 
 .productThumbnail {
-    width: 120px;
-    height: 120px;
-    border-radius: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
 }
 
 .productMain,
 .productThumbnail {
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .thumbnailWrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .active {
-    border: 3px solid var(--orange);
-    position: relative;
-    overflow: hidden;
+  border: 3px solid var(--orange);
+  position: relative;
+  overflow: hidden;
 }
 
 .productThumbnail.active::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--light-gray-blue);
-    opacity: 80%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-gray-blue);
+  opacity: 80%;
 }
 
 .productDisplayWrapper.lbx {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.productDisplayWrapper.lbx .productMain{
-    width: 700px;
-    height: 700px;
+.productDisplayWrapper.lbx .productMain {
+  width: 700px;
+  height: 700px;
 }
 
-.productDisplayWrapper.lbx .thumbnailWrapper{
-    width: 600px;
+.productDisplayWrapper.lbx .thumbnailWrapper {
+  width: 600px;
 }
 
 /* Product Details */
-.productInfo{
-    align-self: center;
+.productInfo {
+  align-self: center;
 }
 
 .company {
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 800;
-    letter-spacing: .09rem;
-    font-size: 18px;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 800;
+  letter-spacing: 0.09rem;
+  font-size: 18px;
 }
 
 .product h2 {
-    font-size: 3.5em;
-    margin-top: 20px;
-    color: var(--black);
+  font-size: 3.5em;
+  margin-top: 20px;
+  color: var(--black);
 }
 
 .product p {
-    font-size: 18px;
-    margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .priceWrapper {
-    position: relative;
+  position: relative;
 }
 
 .price {
-    color: var(--black);
-    font-size: 2.3em;
-    font-weight: 700;
+  color: var(--black);
+  font-size: 2.3em;
+  font-weight: 700;
 }
 
 .discount {
-    position: relative;
-    bottom: 5px;
-    display: inline-block;
-    background: rgba(255, 125, 26, .1);
-    font-size: 1.4rem;
-    color: var(--orange);
-    font-weight: 800;
-    padding: 5px 15px;
-    border-radius: 12px;
-    margin-left: 20px;
+  position: relative;
+  bottom: 5px;
+  display: inline-block;
+  background: rgba(255, 125, 26, 0.1);
+  font-size: 1.4rem;
+  color: var(--orange);
+  font-weight: 800;
+  padding: 5px 15px;
+  border-radius: 12px;
+  margin-left: 20px;
 }
 
 .fullPrice {
-    display: block;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--gray-blue);
-    text-decoration: line-through;
-    margin-top: 10px;
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--gray-blue);
+  text-decoration: line-through;
+  margin-top: 10px;
 }
 
 .productMobArrowNav {
-    display: none;
+  display: none;
 }
 
-@media (max-width: 1064px) {
-    .productDisplayWrapper {
-        margin-left: -80px;
-        margin-right: -80px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: var(--gray-blue);
-        position: relative;
-    }
+@media (max-width: 1210px) {
+  .productDisplayWrapper {
+    margin-left: -50px;
+    margin-right: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gray-blue);
+    position: relative;
+  }
 
-    .thumbnailWrapper {
-        display: none;
-    }
+  .thumbnailWrapper {
+    display: none;
+  }
 
-    .productMain {
-        margin-bottom: 0;
-        border-radius: 0;
-    }
+  .productMain {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
 
-    .productMobArrowNav {
-        display: block;
-        top: 45%;
-        width: 50px;
-    }
+  .productMobArrowNav {
+    display: block;
+    top: 45%;
+    width: 50px;
+  }
 }

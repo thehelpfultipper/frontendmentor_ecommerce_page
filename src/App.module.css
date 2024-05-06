@@ -10,20 +10,21 @@
   gap: 120px;
 }
 
-@media (max-width: 1064px) {
+@media (max-width: 1350px) {
+  .productInfoWrapper {
+    gap: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1210px) {
   .productInfoWrapper {
     flex-direction: column;
     margin-top: 0;
     gap: 50px;
   }
 
-  .header {
-    border-bottom: none;
-  }
-}
-
-
-@media (max-width: 768px) {
   .header {
     border-bottom: none;
   }
