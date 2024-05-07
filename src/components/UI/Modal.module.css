@@ -45,3 +45,14 @@
   width: 35px;
   height: 100%;
 }
+
+@media(max-width: 425px) {
+  .overlayContent.mob {
+    padding: 35px;
+  }
+
+  .mob .dismiss {
+    width: 25px;
+    margin-bottom: 70px;
+  }
+}

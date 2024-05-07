@@ -133,6 +133,16 @@
   }
 }
 
+@media (max-width: 425px) {
+  .menuPanel {
+    font-size: 1.8rem;
+  }
+
+  .menuPanel .mob {
+    gap: 35px;
+  }
+}
+
 @media (max-width: 375px) {
   .navWrapper {
     padding: 15px 20px;
