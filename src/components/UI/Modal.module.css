@@ -41,8 +41,8 @@
   width: 100%;
 }
 
-.dismiss * {
-  width: 35px;
+.dismiss svg {
+  width: 30px;
   height: 100%;
 }
 

@@ -55,8 +55,8 @@
 }
 
 .productDisplayWrapper.lbx .productMain {
-  width: 700px;
-  height: 700px;
+  max-width: 700px;
+  width: 100%;
 }
 
 .productDisplayWrapper.lbx .thumbnailWrapper {
@@ -119,8 +119,20 @@
   margin-top: 10px;
 }
 
-.productMobArrowNav {
+.productDisplayWrapper:not(.lbx) .productMobArrowNav {
   display: none;
+}
+
+.productDisplayWrapper.lbx .productMobArrowNav {
+  top: 40%;
+}
+
+.productDisplayWrapper.lbx .productMobArrowNav:first-of-type {
+  left: -5%;
+}
+
+.productDisplayWrapper.lbx .productMobArrowNav:last-of-type {
+  right: -5%;
 }
 
 @media (max-width: 1210px) {
