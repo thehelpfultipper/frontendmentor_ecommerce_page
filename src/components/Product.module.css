@@ -149,3 +149,78 @@
     width: 50px;
   }
 }
+
+@media (max-width: 640px) {
+  .productMain {
+    height: 400px;
+  }
+
+  .productMain img {
+    object-fit: cover;
+  }
+
+  .productInfo {
+    font-size: 90%;
+  }
+
+  .product h2 {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (max-width: 468px) {
+  .productDisplayWrapper {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .productMain {
+    height: 300px;
+  }
+
+  .productInfo {
+    font-size: 50%;
+  }
+
+  .company {
+    font-size: 12px;
+  }
+
+  .product h2 {
+    margin: 0.4em 0;
+  }
+
+  .product p {
+    font-size: 16px;
+  }
+
+  .priceWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .priceDiff {
+    flex: 2;
+  }
+
+  .price {
+    font-size: 3em;
+  }
+
+  .discount {
+    margin-left: 15px;
+    bottom: 2.5px;
+    font-size: 1rem;
+  }
+
+  .fullPrice {
+    flex: 1;
+    margin-top: 0;
+    font-size: 2em;
+    display: inline-block;
+    text-align: right;
+  }
+}

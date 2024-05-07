@@ -29,3 +29,11 @@
     border-bottom: none;
   }
 }
+
+@media (max-width: 468px) {
+  .productInfoWrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px;
+  }
+}

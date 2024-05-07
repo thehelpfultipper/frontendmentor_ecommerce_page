@@ -104,3 +104,39 @@
     gap: 50px;
   }
 }
+
+@media (max-width: 640px) {
+  .navWrapper {
+    padding: 20px 35px;
+  }
+
+  .navLft {
+    gap: 25px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .mobMenu {
+    width: 20px;
+  }
+
+  .navRht {
+    gap: 30px;
+  }
+
+  .cart {
+    width: 25px;
+  }
+
+  .profile {
+    width: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navWrapper {
+    padding: 20px
+  }
+}
