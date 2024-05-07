@@ -5,15 +5,17 @@ import * as assets from "../assets/index";
 import useMyContext from "../hooks/useMyContext";
 import LightboxContext from "../context/lightbox-context";
 import ArrowNav from "./UI/ArrowNav";
+import useWindowSize from "../hooks/useWindowSize";
 
 import s from "./Product.module.css";
 
 export default function ProductDisplay(props) {
   const [selectedItem, setSelectedItem] = useState(1);
   const { isLbShowing, onChange } = useMyContext(LightboxContext);
+  const { width } = useWindowSize();
 
   const lightboxHandler = () => {
-    if (isLbShowing) return; // prevent click on lightbox product
+    if (width <= 1210 || isLbShowing) return; // prevent click on lightbox product
     onChange(true);
   };
 
@@ -21,7 +23,6 @@ export default function ProductDisplay(props) {
     <div className={`${s.productDisplayWrapper} ${props?.lb && s.lbx}`}>
       <div
         className={`${s.productMain}`}
-        // style={{ backgroundImage: `url(${assets["prod_" + selectedItem]})` }}
         onClick={lightboxHandler}
       >
         <img src={assets["prod_" + selectedItem]} alt={`Product ${selectedItem}`} />
