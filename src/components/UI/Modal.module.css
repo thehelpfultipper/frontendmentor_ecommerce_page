@@ -1,5 +1,5 @@
 .overlay {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   background: var(--black);
@@ -9,18 +9,18 @@
 }
 
 .overlayContent {
-  position: fixed;
+  position: absolute;
   left: 50%;
-  max-width: 700px;
+  max-width: 500px;
   width: 100%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
 }
 
 .overlayContent.mob {
     left: 0%;
     max-width: 50%;
-    height: 100%;
+    max-height: 100vh;
     top: 0%;
     background: var(--white);
     transform: none;
@@ -42,7 +42,7 @@
 }
 
 .dismiss svg {
-  width: 30px;
+  width: 25px;
   height: 100%;
 }
 
