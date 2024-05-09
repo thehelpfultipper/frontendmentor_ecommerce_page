@@ -1,7 +1,7 @@
 /* Product Display */
 .productMain {
   display: flex;
-  max-width: calc(120px * 4 + 160px);
+  max-width: 550px;
   width: 100%;
   border-radius: 30px;
   margin-bottom: 50px;
@@ -28,7 +28,8 @@
 .thumbnailWrapper {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
+  max-width: 550px;
 }
 
 .active {
@@ -143,6 +144,12 @@
 
 .productDisplayWrapper:not(.lbx) .productMobArrowNav {
   display: none;
+}
+
+@media (min-width: 2388px) {
+  .productMain {
+    max-width: calc(120px * 4 + 160px);
+  }
 }
 
 @media (max-width: 1210px) {

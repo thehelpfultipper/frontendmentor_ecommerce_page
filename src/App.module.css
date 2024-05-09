@@ -5,9 +5,16 @@
 }
 
 .productInfoWrapper {
-  margin: 110px 80px;
   display: flex;
-  gap: 120px;
+  gap: 80px;
+  margin: 100px 60px;
+}
+
+@media (min-width: 2388px) {
+  .productInfoWrapper {
+    margin: 110px 80px;
+    gap: 120px;
+  }
 }
 
 @media (max-width: 1350px) {
