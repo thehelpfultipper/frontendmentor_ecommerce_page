@@ -18,7 +18,7 @@ export default function ProductInfo() {
         <p>{item.description}</p>
       </hgroup>
       <ProductPricing item={item} />
-      <CartAction />
+      <CartAction  item={displayProduct} />
     </div>
   );
 }
