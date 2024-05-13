@@ -6,12 +6,13 @@ import FullNavMenu from "./FullNavMenu.jsx";
 import Hamburger from "./Hamburger.jsx";
 import useMyContext from "../../hooks/useMyContext.jsx";
 import CartContext from "../../context/cart-context.js";
+import CartMenu from "./CartMenu.jsx";
 
 import s from "./Nav.module.css";
 
 export default function Nav() {
   const { items, totalQuantity } = useMyContext(CartContext);
-  console.log(items, totalQuantity);
+  
   return (
     <nav className={`${s.navWrapper}`}>
       <div className={s.navLft}>
@@ -31,6 +32,7 @@ export default function Nav() {
             <span className={s.cartIconCount}>{totalQuantity}</span>
           )}
         </div>
+        <CartMenu items={items} />
         <div className={s.profile}>
           <img
             src={assets.avatar}

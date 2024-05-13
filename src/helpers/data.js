@@ -1,3 +1,5 @@
+import {prod_1_thumb} from '../assets/index';
+
 export const MENU = [
     'Collections',
     'Men',
@@ -14,6 +16,9 @@ export const PRODUCTS = [
         description: 'These low-profile sneakers are your perfect casual wear companion.Featuring a durable rubber outter sole, they\'ll withstand everything the weather can offer.',
         currentPrice: 125,
         fullPrice: 250,
-        sale: 0.5
+        sale: 0.5,
+        img: {
+            thumb: prod_1_thumb
+        }
     }
 ]

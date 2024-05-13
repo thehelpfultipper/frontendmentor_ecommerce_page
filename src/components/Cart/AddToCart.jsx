@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CartIcon from '../../icons/CartIcon';
 import useMyContext from '../../hooks/useMyContext';
@@ -7,17 +7,22 @@ import CartContext from '../../context/cart-context';
 import s from './Cart.module.css';
 
 export default function AddToCart({item, quantity, action}) {
-  const {addItem, removeItem} = useMyContext(CartContext);
+  const {items, addItem, removeItem} = useMyContext(CartContext);
 
   const addToCartHandler = () => {
+    if(quantity === 0) return;
+
     const newItem = {...item, qt: quantity};
+        
     if(action === 'inc') {
       addItem(newItem);
     } else if(action === 'dec') {
-      removeItem(newItem);
-    } else {
-      return;
-    }
+      if(items.length > 0) {
+        removeItem({item: newItem, subtype: 'dec'});
+      } else {
+        addItem(newItem);
+      }
+    } 
   }
 
   return (
