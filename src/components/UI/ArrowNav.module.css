@@ -8,6 +8,14 @@
   box-shadow: 0 0 0 10px 20% var(--gray-blue);
 }
 
+.arrowNav:hover {
+  cursor: pointer;
+}
+
+.arrowNav:hover svg path {
+  stroke: var(--orange);
+}
+
 .arrowNav svg {
   height: 100%;
 }

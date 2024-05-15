@@ -46,6 +46,11 @@
   height: 100%;
 }
 
+.dismiss:hover svg path {
+  fill: var(--orange);
+  cursor: pointer;
+}
+
 @media(max-width: 425px) {
   .overlayContent.mob {
     padding: 35px;

@@ -17,6 +17,11 @@
   padding: 25px 18px;
 }
 
+.incBtn:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
 .incBtn img {
   width: 18px;
 }
@@ -36,6 +41,11 @@
   font-weight: 800;
   font-size: 1.4em;
   color: var(--white);
+}
+
+.addToCartBtn:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 
 .cartIcon {

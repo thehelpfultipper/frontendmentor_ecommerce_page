@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import * as assets from "../../assets/index.js";
 import CartIcon from "../../icons/CartIcon.jsx";
@@ -12,6 +12,9 @@ import s from "./Nav.module.css";
 
 export default function Nav() {
   const { items, totalQuantity } = useMyContext(CartContext);
+  const [showCart, setShowCart] = useState(false);
+
+  const showCartHandler = () => setShowCart(!showCart);
   
   return (
     <nav className={`${s.navWrapper}`}>
@@ -26,13 +29,13 @@ export default function Nav() {
         <FullNavMenu />
       </div>
       <div className={s.navRht}>
-        <div className={s.cart}>
+        <div className={s.cart} onClick={showCartHandler}>
           <CartIcon />
           {items.length > 0 && (
             <span className={s.cartIconCount}>{totalQuantity}</span>
           )}
         </div>
-        <CartMenu items={items} />
+        {showCart && <CartMenu items={items} />}
         <div className={s.profile}>
           <img
             src={assets.avatar}

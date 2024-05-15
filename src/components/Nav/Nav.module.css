@@ -33,6 +33,22 @@
   letter-spacing: 0.02rem;
 }
 
+.menu > ul > li > a:hover {
+  color: var(--very-dark-blue);
+  position: relative;
+  cursor: pointer;
+}
+
+.menu > ul > li > a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -160%;
+  width: 100%;
+  height: 4px;
+  background-color: var(--orange);
+}
+
 /* Mobile nav menu */
 .mobMenu {
   display: none;
@@ -50,6 +66,11 @@
   width: 100%;
   align-self: center;
   position: relative;
+}
+
+.cart:hover,
+.profile:hover {
+  cursor: pointer;
 }
 
 .cartIconCount {
@@ -143,7 +164,7 @@
 
 .cartMenuBtn {
   width: 100%;
-  background: var(--orange)!important;
+  background: var(--orange) !important;
   padding: 25px;
   font-size: 1.4rem;
   color: var(--white);
@@ -154,6 +175,12 @@
 .profile {
   max-width: 60px;
   width: 100%;
+  border-radius: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile:hover {
+  box-shadow: 0 0 0 2px var(--orange);
 }
 
 .profile img,
@@ -182,6 +209,10 @@
     display: flex;
     width: 28px;
     align-items: center;
+  }
+
+  .mobMenu:hover {
+    cursor: pointer;
   }
 }
 
@@ -239,7 +270,7 @@
   }
 
   .cartIconCount {
-    font-size: .65rem;
+    font-size: 0.65rem;
     padding: 2px 8px;
   }
 
