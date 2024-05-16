@@ -35,7 +35,7 @@ export default function Nav() {
             <span className={s.cartIconCount}>{totalQuantity}</span>
           )}
         </div>
-        {showCart && <CartMenu items={items} />}
+        {showCart && <CartMenu items={items} onShowCart={showCartHandler} />}
         <div className={s.profile}>
           <img
             src={assets.avatar}

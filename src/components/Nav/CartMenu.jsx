@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import CartMenuList from './CartMenuList';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 import s from "./Nav.module.css";
 
-export default function CartMenu({items}) {
+export default function CartMenu({items, onShowCart}) {
+    const ref = useRef(null);
+    useOnClickOutside(ref, onShowCart);
+
     let cartMenu;
     if(items.length > 0) {
         cartMenu = <CartMenuList />
@@ -13,7 +17,7 @@ export default function CartMenu({items}) {
     }
 
   return (
-    <div className={s.cartMenuWrapper}>
+    <div className={s.cartMenuWrapper} ref={ref}>
         <div className={`${s.cartMenuHeader} ${s.item}`}>Cart</div>
         <div className={`${s.cartMenuContent} ${s.item}`}>
             {cartMenu}

@@ -172,6 +172,15 @@
   border-radius: 10px;
 }
 
+.cartMenuBtn:hover,
+.itemDelete:hover {
+  cursor: pointer;
+}
+
+.cartMenuBtn:hover {
+  opacity: 80%;
+}
+
 .profile {
   max-width: 60px;
   width: 100%;
