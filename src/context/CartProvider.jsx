@@ -57,6 +57,7 @@ const cartReducer = (state, action) => {
         if (current.qt === 1 || subtype === "rmv") {
           // remove item entirely from cart
           totalQt = 0;
+          subtype === 'rmv' && (totalAmt = state.totalAmount - current.currentPrice * current.qt);
           newItems = state.items.filter((item) => item.id !== current.id);
         } else {
           // reduce item count
