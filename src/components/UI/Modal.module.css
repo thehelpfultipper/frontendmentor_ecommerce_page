@@ -1,5 +1,5 @@
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background: var(--black);
@@ -9,7 +9,7 @@
 }
 
 .overlayContent {
-  position: absolute;
+  position: fixed;
   left: 50%;
   max-width: 500px;
   width: 100%;
@@ -18,21 +18,21 @@
 }
 
 .overlayContent.mob {
-    left: 0%;
-    max-width: 50%;
-    max-height: 100vh;
-    top: 0%;
-    background: var(--white);
-    transform: none;
-    padding: 40px;
+  left: 0%;
+  max-width: 50%;
+  height: 100%;
+  top: 0%;
+  background: var(--white);
+  transform: none;
+  padding: 40px;
 }
 
 .mob .dismiss {
-    justify-content: flex-start;
-    position: relative;
-    top: 2%;
-    width: 30px;
-    margin-bottom: 100px;
+  justify-content: flex-start;
+  position: relative;
+  top: 2%;
+  width: 30px;
+  margin-bottom: 100px;
 }
 .dismiss {
   margin-bottom: 20px;
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .overlayContent.mob {
     padding: 35px;
   }

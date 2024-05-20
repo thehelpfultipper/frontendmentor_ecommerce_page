@@ -14,9 +14,9 @@ export default function CartIncrement({inc, onInc, onIncAct}) {
   
   return (
     <div className={s.cartIncrementWrapper}>
-        <button className={`${s.incBtn} noBtn`} onClick={decHandler}><img src="/icon-minus.svg" alt="" /></button>
+        <button className={`${s.incBtn} noBtn`} onClick={decHandler}><img src="/static/icon-minus.svg" alt="" /></button>
         <span className={s.cartQt}>{inc}</span>
-        <button className={`${s.incBtn} noBtn`} onClick={incHandler}><img src="/icon-plus.svg" alt="" /></button>
+        <button className={`${s.incBtn} noBtn`} onClick={incHandler}><img src="/static/icon-plus.svg" alt="" /></button>
     </div>
   )
 }
