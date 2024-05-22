@@ -1,8 +1,10 @@
 {
+  "homepage": ".",
   "name": "ecommerce-product-page",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Klea Merkuri",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
