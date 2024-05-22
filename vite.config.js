@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: `/frontendmentor_ecommerce_page/`
+  base: process.env.NODE_ENV === 'production' ? `/frontendmentor_ecommerce_page/`: `/`
 })
