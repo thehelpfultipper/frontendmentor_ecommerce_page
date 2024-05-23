@@ -19,6 +19,9 @@ function App() {
           </LightboxProvider>
         </div>
       </main>
+      <footer className={`container`}>
+        <span><span className={s.copy}>&copy;</span>2024 - Project Solution by <a href="https://thehelpfultipper.github.io/kleamerkuri/" target="_blank">Klea Merkuri</a> for <a href="https://thehelpfultipper.com/" target="_blank">THT</a>. All Rights Reserved.</span>
+      </footer>
     </CartProvider>
   );
 }
