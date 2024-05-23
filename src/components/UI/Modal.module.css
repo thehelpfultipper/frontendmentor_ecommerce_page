@@ -13,8 +13,8 @@
   left: 50%;
   max-width: 500px;
   width: 100%;
-  top: 45%;
-  transform: translate(-50%, -50%);
+  top: 2%;
+  transform: translateX(-50%);
 }
 
 .overlayContent.mob {
