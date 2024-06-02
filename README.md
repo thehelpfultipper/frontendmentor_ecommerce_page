@@ -2,7 +2,7 @@
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). This E-commerce product page is built with React and Vite, and it’s designed to create a sleek, responsive product page that includes features like a lightbox gallery, cart management, and adaptive layouts for different screen sizes.
 <br /><br />
-[Demo link](https://thehelpfultipper.github.io/frontendmentor_ecommerce_page/).
+[Demo link](https://thehelpfultipper.com/frontendmentor_ecommerce_page/).
 <br /><br />
 
 ## Objective
