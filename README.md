@@ -37,7 +37,7 @@ Users should be able to:
 - Custom Hooks
 
 ## Credits
-[Frontend Mentor](): Project idea and specifications.
+[Frontend Mentor](https://www.frontendmentor.io/): Project idea and specifications.
 
 ## License
 This project is licensed under the MIT License. Feel free to use the code for personal or commercial projects.
