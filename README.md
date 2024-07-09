@@ -6,12 +6,12 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 <br /><br />
 
 ## Objective
-This project aims to build an e-commerce product page looking as close to the provided design as possible. The application is responsive, providing an optimal layout for different device screen sizes, and includes interactive elements with hover states.
+This project aims to build an e-commerce product page that looks as close to the provided design as possible. The responsive application provides an optimal layout for different device screen sizes and includes interactive elements with hover states.
 ### The challenge
 
 Users should be able to:
 
-- View the optimal layout for the site depending on device screen size
+- View the optimal layout for the site depending on the device screen size
 - See hover states for all interactive elements on the page
 - Open a lightbox gallery by clicking on the large product image
 - Switch the large product image by clicking on the small thumbnail images
